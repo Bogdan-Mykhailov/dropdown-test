@@ -12,7 +12,9 @@ This project is a custom dropdown for web applications. It provides the ability 
 
 - Customizable design: Ability to customize the appearance of the component according to your application's design.
 - Search field: Ability to quickly find the desired option using the built-in search field.
-![Screenshot 2024-03-21 at 14.30.07.png](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fyd%2Fcbwf98gs06x2mch1mtzdj41r0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_hcDl3b%2FScreenshot%202024-03-21%20at%2014.30.07.png)
+<img width="486" alt="Screenshot 2024-03-21 at 14 37 11" src="https://github.com/Bogdan-Mykhailov/dropdown-test/assets/91826635/4881b30c-294b-48b5-83fe-180f9d716ed1">
+
+
 ## Installation
 
 1. Clone the repository to your computer using the following command:
