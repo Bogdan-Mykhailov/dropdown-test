@@ -1,0 +1,26 @@
+.dropdown-button {
+  width: 200px;
+  padding: 10px 20px;
+  border: 1px solid #bebebe;
+  background-color: #f1f2f5;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+
+  &--opened {
+    border-color: #007bff;
+
+    .dropdown-button__icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+  }
+}
