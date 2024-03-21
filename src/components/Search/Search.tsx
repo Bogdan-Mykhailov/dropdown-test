@@ -1,4 +1,4 @@
-import {ChangeEvent, FC} from "react";
+import { ChangeEvent, forwardRef } from "react";
 import './Search.scss';
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
   placeholder: string;
 }
 
-export const Search: FC<Props> = ({ value, onChange, placeholder }) => {
+export const Search = forwardRef<HTMLInputElement, Props>(({placeholder, onChange, value}, ref) => {
   return (
     <input
       className="search"
@@ -15,6 +15,7 @@ export const Search: FC<Props> = ({ value, onChange, placeholder }) => {
       placeholder={placeholder}
       value={value}
       onChange={onChange}
+      ref={ref}
     />
   );
-};
+});

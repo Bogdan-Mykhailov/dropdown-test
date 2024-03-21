@@ -17,6 +17,7 @@ export const CustomDropdown: React.FC<Props> = ({placeholder, onSearchData}) => 
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
   const [filteredOptions, setFilteredOptions] = useState<Option[]>(Data);
 
   useEffect(() => {
@@ -32,6 +33,12 @@ export const CustomDropdown: React.FC<Props> = ({placeholder, onSearchData}) => 
       document.removeEventListener('mousedown', handleOutsideClick);
     };
   }, []);
+
+  useEffect(() => {
+    if (isOpen && searchRef.current) {
+      searchRef.current.focus();
+    }
+  }, [isOpen]);
 
   const handleOptionClick = (option: Option) => {
     setSelectedOption(option);
@@ -68,6 +75,7 @@ export const CustomDropdown: React.FC<Props> = ({placeholder, onSearchData}) => 
             placeholder='Пошук...'
             value={searchQuery}
             onChange={handleSearchChange}
+            ref={searchRef}
           />
           <ul className="dropdown__options-list">
             {filteredOptions.map((option, index) => (
